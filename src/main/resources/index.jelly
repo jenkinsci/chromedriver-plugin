@@ -1,0 +1,3 @@
+<div>
+  This plugin auto-installs <a href="http://code.google.com/p/selenium/wiki/ChromeDriver">chromedriver</a> to all the slaves.
+</div>

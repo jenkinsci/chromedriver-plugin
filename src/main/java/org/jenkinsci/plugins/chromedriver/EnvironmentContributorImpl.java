@@ -11,6 +11,8 @@ import hudson.model.TaskListener;
 import java.io.IOException;
 
 /**
+ * Modifies PATH to include chromedriver
+ *
  * @author Kohsuke Kawaguchi
  */
 @Extension

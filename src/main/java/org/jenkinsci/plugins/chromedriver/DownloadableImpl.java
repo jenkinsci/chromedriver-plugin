@@ -18,6 +18,8 @@ import java.net.URL;
 import java.util.List;
 
 /**
+ * Downloads chromedriver installation data.
+ *
  * @author Kohsuke Kawaguchi
  */
 @Extension

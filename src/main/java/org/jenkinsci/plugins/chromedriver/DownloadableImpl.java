@@ -88,9 +88,14 @@ public class DownloadableImpl extends Downloadable {
     }
     
     private String getType(String osName, String sunArchDataModel) {
-        if (osName.contains("Mac") || osName.contains("Darwin"))
+        if (osName.contains("Mac") || osName.contains("Darwin")) {
+            if (sunArchDataModel.equals("32"))
+                return "mac32";
+            if (sunArchDataModel.equals("64"))
+                return "mac64";
             return "mac";
-
+        }
+        
         if (osName.contains("Windows"))
             return "win";
 

@@ -4,6 +4,7 @@ import hudson.Extension;
 import hudson.FilePath;
 import hudson.model.Computer;
 import hudson.model.TaskListener;
+import hudson.remoting.Asynchronous;
 import hudson.remoting.Channel;
 import hudson.remoting.VirtualChannel;
 import hudson.slaves.ComputerListener;
@@ -36,6 +37,7 @@ public class ComputerListenerImpl extends ComputerListener {
         process(c, channel, root,listener);
     }
 
+    @Asynchronous
     public void process(Computer c, VirtualChannel channel, FilePath root, TaskListener listener) throws IOException, InterruptedException {
         try {
             FilePath remoteDir = root.child(INSTALL_DIR);
